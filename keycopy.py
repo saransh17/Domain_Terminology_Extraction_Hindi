@@ -1,10 +1,6 @@
 # coding=utf8
 from collections import OrderedDict
 import numpy as np
-import spacy
-from spacy.lang.en.stop_words import STOP_WORDS
-
-nlp = spacy.load('en_core_web_sm')
 
 class textrank_keywords():
     """Extract keywords from text"""
@@ -96,10 +92,8 @@ class textrank_keywords():
                 window_size=4, lower=False, stopwords=list()):
         """Main function to analyze text"""
         
-        # Set stop words
         self.set_stopwords(stopwords)
         
-        # Pare text by spaCy
         doc = nlp(text)
         
         # Filter sentences
