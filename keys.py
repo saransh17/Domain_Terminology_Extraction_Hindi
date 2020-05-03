@@ -107,8 +107,10 @@ class TextRank4Keyword():
         for i in node_weight_list:
             res = len(i[0].split())
             if res==2:
+                # weight for bigrams
                 i[1]=2*i[1]
             if res==3:
+                # weight for trigrams
                 i[1]=3*i[1]
 
         node_weight = OrderedDict(sorted(node_weight_list, key=lambda t: t[1], reverse=True))
