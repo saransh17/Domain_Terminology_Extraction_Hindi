@@ -12,9 +12,14 @@ def tagger1(sen):
     return model.tag(nltk.word_tokenize(sen))
 
 model = hindi_model()
-input = open("output.txt","r")
+input = open("data/tagtest.txt","r")
 inp = input.read()
 sentences = inp.split("\n")
-sentences = sentences[:800]
+# sentences = sentences[:800]
 new_tagged = map(tagger1,sentences)
-print(list(new_tagged))
+
+
+file = open("data/tagged.txt", "w")
+file.writelines( list( "%s\n" % item for item in new_tagged ) )
+file.close()
+# print(list(new_tagged))

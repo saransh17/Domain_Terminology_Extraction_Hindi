@@ -134,9 +134,9 @@ class TextRank4Keyword():
         
         self.node_weight = node_weight
 
-with open('no_stops.txt','r') as f:
+with open('data/no_stops.txt','r') as f:
     text = f.read()
 
 tr4w = TextRank4Keyword()   
 tr4w.analyze(text, candidate_pos = ['NOUN', 'PROPN'], window_size=4, lower=False)   
-tr4w.get_keywords(20)
+tr4w.get_keywords(100)
