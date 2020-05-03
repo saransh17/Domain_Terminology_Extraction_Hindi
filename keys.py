@@ -139,4 +139,4 @@ with open('no_stops.txt','r') as f:
 
 tr4w = TextRank4Keyword()   
 tr4w.analyze(text, candidate_pos = ['NOUN', 'PROPN'], window_size=4, lower=False)   
-tr4w.get_keywords(100)
+tr4w.get_keywords(20)

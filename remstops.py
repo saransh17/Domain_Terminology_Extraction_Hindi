@@ -1,6 +1,6 @@
 import os
 def Punctuation(string): 
-    punctuations = '''!()-[]{};:'",<>./?@#$%^&*_~'''
+    punctuations = '''!()-[]{};:'",<>./?@#$%^&*_~|'''
     for x in string.lower(): 
         if x in punctuations: 
             string = string.replace(x, " ")
