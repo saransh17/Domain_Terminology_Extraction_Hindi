@@ -166,7 +166,7 @@ class TextRank4Keyword():
 
         self.node_weight = node_weight
 
-with open('no_stops.txt','r') as f:
+with open('data/no_stops.txt','r') as f:
     text = f.read()
 
 tr4w = TextRank4Keyword()
